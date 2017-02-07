@@ -80,29 +80,11 @@ I just push local notifications when entering/leaving regions.
     }
     
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-        let dts = dateFormatter.string(from: Date())
-        
         // create a corresponding local notification
-        let notification = UILocalNotification()
-        notification.alertBody = "Leave " + region.identifier + " @" + dts
-        notification.alertAction = "open" // text that is displayed after "slide to..." on the lock screen - defaults to "slide to view"
-        notification.fireDate = Date.init()
-        notification.soundName = UILocalNotificationDefaultSoundName // play default sound
-        
-        UIApplication.shared.scheduleLocalNotification(notification)
     }
     
     func locationManager(_ manager: CLLocationManager, monitoringDidFailFor region: CLRegion?, withError error: Error) {
         // create a corresponding local notification
-        let notification = UILocalNotification()
-        notification.alertBody = "Error " + error.localizedDescription
-        notification.alertAction = "open" // text that is displayed after "slide to..." on the lock screen - defaults to "slide to view"
-        notification.fireDate = Date.init()
-        notification.soundName = UILocalNotificationDefaultSoundName // play default sound
-        
-        UIApplication.shared.scheduleLocalNotification(notification)
     }
 ```
 
