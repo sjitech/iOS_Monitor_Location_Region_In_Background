@@ -24,7 +24,7 @@ And the event may be a little delayed( As my experience, may up to 4 minutes)
 
 [SampleFreeApp/AppDelegate.swift](https://github.com/sjitech/iOS_Monitor_Location_Region_In_Background/blob/master/SampleFreeApp/AppDelegate.swift)
 
-The `requestAlwaysAuthorization()` will show a popup to let user choose "Agree" or "Disagree"
+The `requestAlwaysAuthorization()` will show a popup to let user choose "Allow" or "Not Allow"
 
 ```
     let locm = CLLocationManager()
