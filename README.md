@@ -114,3 +114,6 @@ Even if you update your app to monitor other place (with a different identifier 
 
 So be careful, do not forget to call `stopMonitoring(...the_region...)` when not neccessary.
 
+
+By the way, i'v found another more complete demo app which integrate Maps app so let you choose where you want to monitor.
+https://www.raywenderlich.com/136165/core-location-geofencing-tutorial
