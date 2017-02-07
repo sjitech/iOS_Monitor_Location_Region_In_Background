@@ -22,7 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways) {
             myInit()
         } else {
-            application.applicationIconBadgeNumber = 0
             locm.requestAlwaysAuthorization()
         }
         return true
@@ -64,8 +63,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         notification.alertAction = "open" // text that is displayed after "slide to..." on the lock screen - defaults to "slide to view"
         notification.fireDate = Date.init()
         notification.soundName = UILocalNotificationDefaultSoundName // play default sound
-        notification.userInfo = nil
-        notification.applicationIconBadgeNumber = notification.applicationIconBadgeNumber + 1;
         
         UIApplication.shared.scheduleLocalNotification(notification)
     }
@@ -81,8 +78,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         notification.alertAction = "open" // text that is displayed after "slide to..." on the lock screen - defaults to "slide to view"
         notification.fireDate = Date.init()
         notification.soundName = UILocalNotificationDefaultSoundName // play default sound
-        notification.userInfo = nil
-        notification.applicationIconBadgeNumber = UIApplication.shared.applicationIconBadgeNumber + 1;
         
         UIApplication.shared.scheduleLocalNotification(notification)
     }
@@ -94,8 +89,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         notification.alertAction = "open" // text that is displayed after "slide to..." on the lock screen - defaults to "slide to view"
         notification.fireDate = Date.init()
         notification.soundName = UILocalNotificationDefaultSoundName // play default sound
-        notification.userInfo = nil
-        notification.applicationIconBadgeNumber = UIApplication.shared.applicationIconBadgeNumber + 1;
         
         UIApplication.shared.scheduleLocalNotification(notification)
     }
